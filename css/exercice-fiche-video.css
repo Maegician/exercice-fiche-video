@@ -1,0 +1,448 @@
+/*
+__  __         _______ _______       
+|  \/  |       |__   __|__   __|/\    
+| \  / | ___  __ _| |     | |  /  \   
+| |\/| |/ _ \/ _` | |     | | / /\ \  
+| |  | |  __/ (_| | |     | |/ ____ \ 
+|_|  |_|\___|\__, |_|     |_/_/    \_\
+              __/ |                   
+             |___/                     */
+
+
+
+
+
+
+/* PROPRIETES GENERALES DE LA PAGE */
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+    max-width: 1170px;
+    margin: 0;
+}
+
+#resume,
+#saisons,
+#extrait{
+    padding: 50px 20px 10px 20px;
+    text-align: center;
+}
+
+.retour-top{
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: fixed;
+    top: 95%;
+    left: 95%;
+    z-index: 99999;
+}
+
+.retour-top a:hover ,
+.retour-top a:active ,
+.retour-top a:focus{
+    background-color: rgba(0,0,0,.5);
+    transition:.8s;
+}
+
+.retour-top img{
+    width: auto;
+    height:20px;
+}
+
+#generalites h3,
+#resume h3,
+#saisons h3,
+#extrait h3{
+    font: 20px 'Handlee', cursive;
+    text-align: center;
+    color:white;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+    background-color: rgb(163, 163, 163);
+    border-radius: 50px;
+    padding: 10px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c6c6c6+46,8e815e+99,ffc87c+100,ffc87c+100,207cca+100,2989d8+100 */
+    background: #c6c6c6; /* Old browsers */
+    background: -moz-linear-gradient(top, #c6c6c6 46%, #8e815e 99%, #ffc87c 100%, #ffc87c 100%, #207cca 100%, #2989d8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #c6c6c6 46%,#8e815e 99%,#ffc87c 100%,#ffc87c 100%,#207cca 100%,#2989d8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #c6c6c6 46%,#8e815e 99%,#ffc87c 100%,#ffc87c 100%,#207cca 100%,#2989d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6c6c6', endColorstr='#2989d8',GradientType=0 ); /* IE6-9 */
+    
+}
+
+
+/* FIN PROPRIETES GENERALES DE LA PAGE */
+
+
+
+
+
+
+
+/* MENU */
+header{
+    background-color: rgb(190, 190, 190);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 99999;
+    padding:5px 0px;
+    min-width: 505px;
+    max-width: 1170px;
+    flex-wrap: wrap;
+}
+
+header > img{
+    width: 10vh;
+}
+
+.menu li{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#nom-site{
+    flex: 1;
+    align-self: flex-start;
+    color: white;
+    font: 12px 'Raleway', sans-serif;
+    max-height: 75px;
+}
+
+#nom-site h1,
+#nom-site h2{
+    margin: 0;
+}
+
+#nom-site h1{
+    font-size: 15px;
+}
+
+#nom-site h2{
+    font-size: 30px;
+    min-width: 314px;
+}
+
+.menu, #nom-site{
+    background-color: rgb(190, 190, 190);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li a{
+    text-decoration: none;
+    color:white;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+}
+
+.menu li a:hover,
+.menu li a:focus,
+.menu li a:active{
+    padding-right: 8px;
+}
+
+
+/* bouton yt */
+.menu li:last-child{
+    background-color: rgb(250, 0, 0);
+    border-radius: 25px;
+    padding: 5px;
+    line-height: 10px;
+    transition: .8s;
+    text-shadow: 0;
+}
+
+.menu li:last-child::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 16px solid rgb(255, 255, 255);
+    border-bottom: 8px solid transparent;
+    display: inline-block;
+}
+
+.menu li:last-child:hover,
+.menu li:last-child:focus,
+.menu li:last-child:active{
+    background-color: rgb(250, 0, 0);
+}
+/* fin bouton yt */
+/* FIN DU MENU */
+
+
+
+
+
+
+/* BANDEAU PRESENTATION */
+#generalites h2:first-child{
+    height: 300px;
+    font: 40px 'Handlee', cursive;
+    text-transform: uppercase;
+    margin: 25px 50px;
+    color:white;
+    text-shadow: 2px 2px 0 rgba(0,0,0,.5);
+    width: 200px;
+    text-align: center;
+}
+
+.intro-serie{
+    background: url(../images/republic-city.jpg) no-repeat center center/1800px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 50px;
+    flex-wrap: wrap;
+    margin-top: 90px;
+}
+
+.intro-serie img{
+    width: auto;
+    height: 300px;
+    box-shadow: 0 0 10px rgba(255,255,255,.7);
+    margin: 25px 50px;
+}
+
+.liste-generalites{
+    display: block;
+    list-style-type: none;
+    color: white;
+    margin: 25px 50px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 10px;
+}
+
+#generalites li{
+    margin-bottom: 8px;
+    font: 12px 'Raleway', sans-serif;
+}
+
+#generalites li>span{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+/* FIN BANDEAU PRESENTATION */
+
+
+
+
+
+
+
+
+/* CARTES ACTEURS PRINCIPAUX */
+
+.ul-acteurs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+
+.carte-acteur {
+    width: 200px;
+    margin: 20px;
+    background-color: rgb(192, 192, 192);
+    box-shadow: 0 5px 15px rgba(92, 92, 92, 0.5);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    min-width: 200px;
+}
+
+.image-acteur img{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.carte-acteur .texte-acteur {
+    width: 200px;
+    height: 300px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 100%;
+    transition: .8s;
+    opacity: 0;
+    color: rgb(255, 255, 255);
+}
+
+.carte-acteur .texte-acteur a{
+    text-decoration: none;
+    font-size: 18px;
+    transition: .5s;
+    color: rgb(255, 255, 255);
+    background: url('../images/lien-carte-acteur.png') no-repeat 100% 0;
+    background-size: 17px 17px;
+    padding: 10px;
+}
+
+.carte-acteur .texte-acteur a:hover,
+.carte-acteur .texte-acteur a:active,
+.carte-acteur .texte-acteur a:focus,
+.carte-acteur .texte-acteur a:visited
+{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.carte-acteur:hover .texte-acteur {
+    bottom: 0px;
+    opacity: 1;
+}
+
+.Korra{
+    background-color: rgba(47, 146, 179, 0.6);
+}
+
+.Mako{
+    background-color: rgba(219, 35, 35, 0.6);
+}
+
+.Bolin{
+    background-color: rgba(33, 126, 45, 0.6);
+}
+
+.Asami{
+    background-color: rgba(94, 94, 94, 0.6) ;
+}
+
+.Tenzin{
+    background-color: rgba(250, 213, 92, 0.6) ;
+}
+
+/* FIN CARTES ACTEURS PRINCIPAUX */
+
+
+
+
+
+
+
+/*RESUME*/
+#resume{
+    text-align: justify;
+    background-color: rgb(218, 218, 218);
+}
+
+#resume p{
+    color: rgb(24, 24, 24);
+    line-height: 25px;
+    font-size: 15px;
+    padding-bottom: 30px;
+}
+
+/* #resume p:nth-child(2n+1){
+padding-left: 50px;
+} */
+
+#resume p::first-letter {
+    font-size:20px;
+    padding-right:2px;
+    float:left;
+    color:rgb(0, 0, 0);
+  }
+
+#resume img:first-of-type{
+    width:300px;
+    float:left;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#resume img:last-of-type{
+    width: 300px;
+    float:right;
+    margin-left: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+
+/*FIN RESUME*/
+
+
+
+
+
+
+/*TABLEAU SAISONS*/
+table{
+    margin: 20px auto;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+th {
+    background-color: rgb(190, 190, 190);
+    border-radius: 10px;
+}
+
+td {
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table::after{
+    content: url(../images/4-elements.png);
+    display:inline-block;
+    margin-top: 50px;
+}
+
+/*FIN TABLEAU SAISONS*/
+
+
+
+
+
+
+
+/*EXTRAIT*/
+#extrait{
+    background-color: rgb(218, 218, 218);
+    padding-bottom: 30px;
+}
+/*FIN EXTRAIT*/
+
+
+
+
+
+
+
+/*FOOTER*/
+footer{
+    text-align: center;
+    padding-top: 30px;
+}
+
+footer img{
+    width: 50px;
+    padding-left: 20px;
+}
+
+footer p{
+    font-family: 'Indie Flower', cursive;
+}
+/*FIN FOOTER*/
